@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_auth"
+    app:startDestination="@id/fragmentSignIn">
+    <fragment
+        android:id="@+id/fragmentSignIn"
+        android:name="com.farroos.foodmarket.ui.auth.signin.SigninFragment"
+        android:label="fragment_signup"
+        tools:layout="@layout/fragment_signin">
+        <action
+            android:id="@+id/action_fragmentSignIn_to_fragmentSignUp"
+            app:destination="@id/fragmentSignUp" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSignUp"
+        android:name="com.farroos.foodmarket.ui.auth.signup.SignupFragment"
+        android:label="SignupFragment"
+        tools:layout="@layout/fragment_signup">
+        <action
+            android:id="@+id/action_fragmentSignUp_to_fragmentSignUpAddress"
+            app:destination="@id/fragmentSignUpAddress" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSignUpAddress"
+        android:name="com.farroos.foodmarket.ui.auth.signup.SignupAddressFragment"
+        android:label="SignupAddressFragment"
+        tools:layout="@layout/fragment_signup_address">
+        <action
+            android:id="@+id/action_fragmentSignUpAddress_to_signupSuccessFragment"
+            app:destination="@id/signupSuccessFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signupSuccessFragment"
+        android:name="com.farroos.foodmarket.ui.auth.signup.SignupSuccessFragment"
+        android:label="SignupSuccessFragment"
+        tools:layout="@layout/fragment_signup_success" />
+</navigation>

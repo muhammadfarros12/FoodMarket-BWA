@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    tools:context=".ui.auth.signin.SigninFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="24dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="24dp"
+        android:paddingTop="26dp"
+        android:paddingRight="24dp">
+
+        <TextView
+            style="@style/TextView.PoppinsNormal16sp020202"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Phone No." />
+
+        <EditText
+            android:id="@+id/edt_phone_number"
+            style="@style/EditText.PoppinsNormal14sp8D92A3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/shape_rectangle_outline_8_020202"
+            android:hint="Type your phone number"
+            android:padding="10dp" />
+
+        <TextView
+            style="@style/TextView.PoppinsNormal16sp020202"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Address" />
+
+        <EditText
+            android:id="@+id/edt_address"
+            style="@style/EditText.PoppinsNormal14sp8D92A3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/shape_rectangle_outline_8_020202"
+            android:hint="Type your address"
+            android:padding="10dp" />
+
+        <TextView
+            style="@style/TextView.PoppinsNormal16sp020202"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="House No." />
+
+        <EditText
+            android:id="@+id/edt_house_number"
+            style="@style/EditText.PoppinsNormal14sp8D92A3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/shape_rectangle_outline_8_020202"
+            android:hint="Type your house no"
+            android:padding="10dp" />
+
+        <TextView
+            style="@style/TextView.PoppinsNormal16sp020202"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="City" />
+
+        <EditText
+            android:id="@+id/edt_city"
+            style="@style/EditText.PoppinsNormal14sp8D92A3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/shape_rectangle_outline_8_020202"
+            android:hint="Type your city"
+            android:padding="10dp" />
+
+        <Button
+            android:id="@+id/btn_signup_now"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#FFC700"
+            android:fontFamily="@font/poppins"
+            android:padding="8dp"
+            android:text="Sign Up Now"
+            android:textAllCaps="false"
+            android:textColor="#020202" />
+
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

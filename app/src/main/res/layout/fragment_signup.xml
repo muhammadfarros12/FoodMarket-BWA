@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    tools:context=".ui.auth.signin.SigninFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="24dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="24dp"
+        android:paddingTop="26dp"
+        android:paddingRight="24dp">
+
+        <ImageView
+            android:id="@+id/img_profile"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_picture_empty" />
+
+        <TextView
+            style="@style/TextView.PoppinsNormal16sp020202"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Full Name" />
+
+        <EditText
+            android:id="@+id/edt_full_name"
+            style="@style/EditText.PoppinsNormal14sp8D92A3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/shape_rectangle_outline_8_020202"
+            android:hint="Type your Full Name"
+            android:padding="10dp" />
+
+        <TextView
+            style="@style/TextView.PoppinsNormal16sp020202"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Email Address" />
+
+        <EditText
+            android:id="@+id/edt_email"
+            style="@style/EditText.PoppinsNormal14sp8D92A3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/shape_rectangle_outline_8_020202"
+            android:hint="Type your Email address"
+            android:padding="10dp" />
+
+        <TextView
+            style="@style/TextView.PoppinsNormal16sp020202"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Password" />
+
+        <EditText
+
+            android:id="@+id/edt_password"
+            style="@style/EditText.PoppinsNormal14sp8D92A3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/shape_rectangle_outline_8_020202"
+            android:hint="Type your Password"
+            android:inputType="textPassword"
+            android:padding="10dp" />
+
+        <Button
+            android:id="@+id/btn_continue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#FFC700"
+            android:fontFamily="@font/poppins"
+            android:padding="8dp"
+            android:text="Continue"
+            android:textAllCaps="false"
+            android:textColor="#020202" />
+
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
