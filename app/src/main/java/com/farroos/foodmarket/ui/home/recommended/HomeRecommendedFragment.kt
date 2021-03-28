@@ -21,8 +21,8 @@ class HomeRecommendedFragment : Fragment(), HomeNewTasteAdapter.ItemAdapterCallb
     private var recommendedList: ArrayList<Data>? = ArrayList()
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home_new_taste, container, false)
@@ -48,7 +48,7 @@ class HomeRecommendedFragment : Fragment(), HomeNewTasteAdapter.ItemAdapterCallb
 //    }
 
     override fun onClick(v: View, data: Data) {
-        val detail = Intent(activity, DetailActivity::class.java)
+        val detail = Intent(activity, DetailActivity::class.java).putExtra("data", data)
         startActivity(detail)
     }
 

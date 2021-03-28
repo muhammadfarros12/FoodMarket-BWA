@@ -17,7 +17,7 @@ import kotlinx.android.synthetic.main.fragment_home_new_taste.*
 
 class HomeNewTasteFragment : Fragment(), HomeNewTasteAdapter.ItemAdapterCallback {
 
-//    private var foodList: ArrayList<HomeVerticalModel> = ArrayList()
+    //    private var foodList: ArrayList<HomeVerticalModel> = ArrayList()
     private var newTasteList: ArrayList<Data>? = ArrayList()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -46,7 +46,7 @@ class HomeNewTasteFragment : Fragment(), HomeNewTasteAdapter.ItemAdapterCallback
 //    }
 
     override fun onClick(v: View, data: Data) {
-        val detail = Intent(activity, DetailActivity::class.java)
+        val detail = Intent(activity, DetailActivity::class.java).putExtra("data", data)
         startActivity(detail)
     }
 

@@ -78,7 +78,7 @@ class HomeFragment : Fragment(), HomeAdapter.ItemAdapterCallback,
        }*/
 
     override fun onClick(v: View, data: Data) {
-        val detail = Intent(activity, DetailActivity::class.java)
+        val detail = Intent(activity, DetailActivity::class.java).putExtra("data", data)
         startActivity(detail)
     }
 

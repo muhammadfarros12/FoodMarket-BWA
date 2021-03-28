@@ -13,6 +13,12 @@
         <action
             android:id="@+id/action_detailFragment_to_paymentFragment"
             app:destination="@id/paymentFragment" />
+
+        <argument android:name="data"
+            app:argType="com.farroos.foodmarket.model.response.home.Data"
+            app:nullable="true"
+            android:defaultValue="@null"/>
+
     </fragment>
     <fragment
         android:id="@+id/paymentFragment"

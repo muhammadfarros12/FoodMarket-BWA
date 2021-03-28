@@ -8,7 +8,7 @@
     tools:context=".ui.detail.DetailFragment">
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/img_poster"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:scaleType="centerCrop"
