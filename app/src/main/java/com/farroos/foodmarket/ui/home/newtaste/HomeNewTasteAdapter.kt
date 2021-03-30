@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.farroos.foodmarket.R
-import com.farroos.foodmarket.model.dummy.HomeVerticalModel
 import com.farroos.foodmarket.model.response.home.Data
 import com.farroos.foodmarket.utils.Helpers.formatPrice
 import kotlinx.android.synthetic.main.item_home_vertical.view.*
@@ -42,7 +41,7 @@ class HomeNewTasteAdapter(
                 }
 
                 Glide.with(context)
-                        .load(data.picturesPath)
+                        .load(data.picturePath)
                         .into(img_poster)
 
                 itemView.setOnClickListener { itemAdapterCallback.onClick(it, data) }

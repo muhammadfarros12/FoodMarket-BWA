@@ -14,7 +14,7 @@ object Helpers {
 
     fun getCurrencyIDR(price: Double): String {
         val format = DecimalFormat("#,###,###")
-        return "IDR" + format.format(price).replace(",".toRegex(), ".")
+        return "IDR " + format.format(price).replace(",".toRegex(), ".")
     }
 
     fun getDefaultGson(): Gson {

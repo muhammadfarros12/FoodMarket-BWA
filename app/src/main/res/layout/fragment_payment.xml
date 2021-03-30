@@ -53,7 +53,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/img_poster" />
 
             <TextView
-                android:id="@+id/textView7"
+                android:id="@+id/txt_name_item"
                 style="@style/TextView.PoppinsNormal14sp8D92A3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -72,7 +72,7 @@
                 android:layout_marginTop="6dp"
                 android:text="Driver"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+                app:layout_constraintTop_toBottomOf="@+id/txt_name_item" />
 
             <TextView
                 android:id="@+id/textView10"
@@ -126,7 +126,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="24dp"
-                android:text="2 items"
+                android:text="1 items"
                 app:layout_constraintBottom_toBottomOf="@+id/img_poster"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/img_poster" />
@@ -149,7 +149,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
                 android:layout_marginEnd="24dp"
-                android:text="IDR 8.000"
+                android:text="IDR 5.000"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txt_harga" />
 

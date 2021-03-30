@@ -7,13 +7,13 @@ import com.google.gson.annotations.SerializedName
 data class User(
         @Expose
         @SerializedName("address")
-        val address: Any,
+        val address: String?,
         @Expose
         @SerializedName("city")
-        val city: Any,
+        val city: String?,
         @Expose
         @SerializedName("created_at")
-        val createdAt: Int,
+        val createdAt: Long?,
         @Expose
         @SerializedName("current_team_id")
         val currentTeamId: String,
@@ -25,7 +25,7 @@ data class User(
         val emailVerifiedAt: Any,
         @Expose
         @SerializedName("houseNumber")
-        val houseNumber: Any,
+        val houseNumber: String?,
         @Expose
         @SerializedName("id")
         val id: Int,
@@ -34,10 +34,10 @@ data class User(
         val name: String,
         @Expose
         @SerializedName("phoneNumber")
-        val phoneNumber: Any,
+        val phoneNumber: String?,
         @Expose
         @SerializedName("profile_photo_path")
-        val profilePhotoPath: Any,
+        val profilePhotoPath: String,
         @Expose
         @SerializedName("profile_photo_url")
         val profilePhotoUrl: String,
@@ -46,5 +46,6 @@ data class User(
         val roles: String,
         @Expose
         @SerializedName("updated_at")
-        val updatedAt: Int
+        val updatedAt: Long?
 )
+// sama dengan data/user

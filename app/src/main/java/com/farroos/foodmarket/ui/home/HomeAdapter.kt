@@ -36,7 +36,7 @@ class HomeAdapter(
                 }
 
                 Glide.with(context)
-                    .load(data.picturesPath)
+                    .load(data.picturePath)
                     .into(img_poster)
 
                 itemView.setOnClickListener { itemAdapterCallback.onClick(it, data) }

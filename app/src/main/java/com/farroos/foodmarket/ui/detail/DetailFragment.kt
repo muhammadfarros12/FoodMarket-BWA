@@ -1,11 +1,11 @@
 package com.farroos.foodmarket.ui.detail
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.navigation.Navigation
 import com.bumptech.glide.Glide
 import com.farroos.foodmarket.R
@@ -14,6 +14,8 @@ import com.farroos.foodmarket.utils.Helpers.formatPrice
 import kotlinx.android.synthetic.main.fragment_detail.*
 
 class DetailFragment : Fragment() {
+
+    var bundle: Bundle ?= null
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
@@ -35,15 +37,17 @@ class DetailFragment : Fragment() {
         }
 
         btn_order_now.setOnClickListener {
-            Navigation.findNavController(it).navigate(R.id.action_detailFragment_to_paymentFragment)
+            Navigation.findNavController(it).navigate(R.id.action_detailFragment_to_paymentFragment, bundle)
         }
 
     }
 
     private fun initView(data: Data?) {
 
+        bundle = bundleOf("data" to data)
+
         Glide.with(requireActivity())
-                .load(data?.picturesPath)
+                .load(data?.picturePath)
                 .into(img_poster)
 
         txt_title.text = data?.name
