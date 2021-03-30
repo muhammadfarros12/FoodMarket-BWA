@@ -55,6 +55,22 @@
         <item name="android:textSize">14sp</item>
     </style>
 
+    <style name="TextView.PoppinsNormal13sp8D92A3">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">#8D92A3</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+    <style name="TextView.PoppinsNormal10sp8D92A3">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">#8D92A3</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+    <style name="TextView.PoppinsNormal10spD9435E">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">#D9435E</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
     <style name="TextView.PoppinsNormal14sp020202">
         <item name="android:fontFamily">@font/poppins</item>
         <item name="android:textColor">#020202</item>

@@ -4,6 +4,7 @@ import com.farroos.foodmarket.model.response.Wrapper
 import com.farroos.foodmarket.model.response.checkout.CheckoutResponse
 import com.farroos.foodmarket.model.response.home.HomeResponse
 import com.farroos.foodmarket.model.response.login.LoginResponse
+import com.farroos.foodmarket.model.response.transaction.TransactionResponse
 import io.reactivex.Observable
 import okhttp3.MultipartBody
 import retrofit2.http.*
@@ -47,4 +48,7 @@ interface Endpoint {
         @Field("total") total: String,
         @Field("status") status: String
     ): Observable<Wrapper<CheckoutResponse>>
+
+    @GET("transaction")
+    fun transaction(): Observable<Wrapper<TransactionResponse>>
 }
