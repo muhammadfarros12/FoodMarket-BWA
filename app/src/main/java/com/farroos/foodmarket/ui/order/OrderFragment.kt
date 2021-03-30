@@ -11,19 +11,20 @@ import com.farroos.foodmarket.R
 import com.farroos.foodmarket.model.response.transaction.Data
 import com.farroos.foodmarket.model.response.transaction.TransactionResponse
 import kotlinx.android.synthetic.main.fragment_order.*
+import kotlinx.android.synthetic.main.layout_toolbar.view.*
 
 class OrderFragment : Fragment(), OrderContract.View {
 
     lateinit var presenter: OrderPresenter
     var progressDialog: Dialog? = null
 
-    var inProgressList:ArrayList<Data>? = ArrayList()
-    var pasOrdersList:ArrayList<Data>? = ArrayList()
+    var inProgressList: ArrayList<Data>? = ArrayList()
+    var pasOrdersList: ArrayList<Data>? = ArrayList()
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater,
+            container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
         val root = inflater.inflate(R.layout.fragment_order, container, false)
         return root
@@ -46,28 +47,32 @@ class OrderFragment : Fragment(), OrderContract.View {
             it.setCancelable(false)
             it.window?.setBackgroundDrawableResource(android.R.color.transparent)
         }
+
+        include_toolbar.toolbar.title = "Your Orders"
+        include_toolbar.toolbar.subtitle = "Wait for the best meal"
+
     }
 
     override fun onTransactionSuccess(transactionResponse: TransactionResponse) {
-        if (transactionResponse.data.isNullOrEmpty()){
+        if (transactionResponse.data.isNullOrEmpty()) {
             ll_empty.visibility = View.VISIBLE
             ll_tab.visibility = View.GONE
             include_toolbar.visibility = View.GONE
         } else {
-            for(a in transactionResponse.data.indices){
-                if (transactionResponse.data[a].status.equals("ON_DELIVERY",true)
-                    ||transactionResponse.data[a].status.equals("PENDING",true)) {
+            for (a in transactionResponse.data.indices) {
+                if (transactionResponse.data[a].status.equals("ON_DELIVERY", true)
+                        || transactionResponse.data[a].status.equals("PENDING", true)) {
                     inProgressList?.add(transactionResponse.data[a])
                 } else
-                if (transactionResponse.data[a].status.equals("DELIVERY",true)
-                    || transactionResponse.data[a].status.equals("CANCELLED",true)
-                    || transactionResponse.data[a].status.equals("SUCCESS",true)) {
-                    pasOrdersList?.add(transactionResponse.data[a])
-                }
+                    if (transactionResponse.data[a].status.equals("DELIVERY", true)
+                            || transactionResponse.data[a].status.equals("CANCELLED", true)
+                            || transactionResponse.data[a].status.equals("SUCCESS", true)) {
+                        pasOrdersList?.add(transactionResponse.data[a])
+                    }
             }
 
             val sectionPagerAdapter = SectionPagerAdapter(
-                childFragmentManager
+                    childFragmentManager
             )
             sectionPagerAdapter.setData(inProgressList, pasOrdersList)
             view_pager.adapter = sectionPagerAdapter
